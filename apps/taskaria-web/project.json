@@ -24,7 +24,8 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "taskaria-web:build"
+        "buildTarget": "taskaria-web:build",
+        "proxyConfig": "apps/taskaria-web/proxy.conf.json"
       },
       "configurations": {
         "development": {
