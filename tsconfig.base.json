@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@taskaria-app/api/feature/hello-world": [
-        "libs/api/feature/hello-world/src/index.ts"
+      "@taskaria-app/api/route/hello-world": [
+        "libs/api/route/hello-world/src/index.ts"
       ],
       "@taskaria-app/app/data-access/store": [
         "libs/app/data-access/store/src/index.ts"

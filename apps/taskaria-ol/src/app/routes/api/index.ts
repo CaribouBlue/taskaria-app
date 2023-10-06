@@ -1,6 +1,9 @@
 import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
-import * as helloWorld from '@taskaria-app/api/feature/hello-world';
+import {
+  helloWorldRoute,
+  helloWorldPrefix,
+} from '@taskaria-app/api/route/hello-world';
 
 export default async function (fastify: FastifyInstance) {
-    fastify.register(helloWorld.route, { prefix: helloWorld.prefix });
+  fastify.register(helloWorldRoute, { prefix: helloWorldPrefix });
 }

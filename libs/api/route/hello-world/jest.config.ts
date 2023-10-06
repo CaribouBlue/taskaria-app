@@ -1,11 +1,11 @@
 /* eslint-disable */
 export default {
-  displayName: 'api-feature-hello-world',
+  displayName: 'api-route-hello-world',
   preset: '../../../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../../coverage/libs/api/feature/hello-world',
+  coverageDirectory: '../../../../coverage/libs/api/route/hello-world',
 };

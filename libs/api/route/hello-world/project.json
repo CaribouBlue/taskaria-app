@@ -1,21 +1,21 @@
 {
-  "name": "api-feature-hello-world",
+  "name": "api-route-hello-world",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/api/feature/hello-world/src",
+  "sourceRoot": "libs/api/route/hello-world/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/api/feature/hello-world/**/*.ts"]
+        "lintFilePatterns": ["libs/api/route/hello-world/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/api/feature/hello-world/jest.config.ts",
+        "jestConfig": "libs/api/route/hello-world/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
