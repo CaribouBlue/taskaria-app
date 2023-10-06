@@ -18,7 +18,12 @@
       "@taskaria-app/api/feature/hello-world": [
         "libs/api/feature/hello-world/src/index.ts"
       ],
-      "@taskaria-app/data-access/store": ["libs/data-access/store/src/index.ts"]
+      "@taskaria-app/app/data-access/store": [
+        "libs/app/data-access/store/src/index.ts"
+      ],
+      "@taskaria-app/hello-world/data-access": [
+        "libs/hello-world/data-access/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
