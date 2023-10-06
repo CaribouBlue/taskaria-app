@@ -17,7 +17,8 @@
     "paths": {
       "@taskaria-app/api/feature/hello-world": [
         "libs/api/feature/hello-world/src/index.ts"
-      ]
+      ],
+      "@taskaria-app/data-access/store": ["libs/data-access/store/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
