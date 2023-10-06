@@ -6,7 +6,7 @@ import NxWelcome from './nx-welcome';
 export function App() {
   return (
     <div>
-      <NxWelcome title="taskaria-app" />
+      <NxWelcome title="taskaria-web" />
     </div>
   );
 }

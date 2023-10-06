@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@taskaria-app/api/feature/hello-world": [
+        "libs/api/feature/hello-world/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
