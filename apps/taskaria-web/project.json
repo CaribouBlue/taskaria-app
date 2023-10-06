@@ -1,7 +1,7 @@
 {
-  "name": "taskaria-app",
+  "name": "taskaria-web",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/taskaria-app/src",
+  "sourceRoot": "apps/taskaria-web/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/taskaria-app"
+        "outputPath": "dist/apps/taskaria-web"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "taskaria-app:build"
+        "buildTarget": "taskaria-web:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "taskaria-app:build:development",
+          "buildTarget": "taskaria-web:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "taskaria-app:build:production",
+          "buildTarget": "taskaria-web:build:production",
           "hmr": false
         }
       }
@@ -41,14 +41,14 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "taskaria-app:build"
+        "buildTarget": "taskaria-web:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "taskaria-app:build:development"
+          "buildTarget": "taskaria-web:build:development"
         },
         "production": {
-          "buildTarget": "taskaria-app:build:production"
+          "buildTarget": "taskaria-web:build:production"
         }
       }
     },
@@ -57,14 +57,14 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/taskaria-app"
+        "reportsDirectory": "../../coverage/apps/taskaria-web"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/taskaria-app/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/taskaria-web/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
