@@ -2,7 +2,12 @@
   "name": "@taskaria-app/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx run-many -t build -p taskaria-*",
+    "test": "nx run-many -t test -p taskaria-*",
+    "serve": "nx run-many -t serve -p taskaria-*",
+    "pre-commit-checks": "nx run-many -t lint test build -p taskaria-*"
+  },
   "private": true,
   "dependencies": {
     "@fastify/autoload": "~5.7.1",
