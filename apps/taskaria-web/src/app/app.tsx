@@ -1,12 +1,14 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { useGetHelloWorldQuery } from '@taskaria-app/hello-world/data-access';
 import styles from './app.module.css';
 
-import NxWelcome from './nx-welcome';
-
 export function App() {
+  const { isLoading, data } = useGetHelloWorldQuery();
+  const headerText = isLoading ? 'Loading...' : data?.message;
+
   return (
     <div>
-      <NxWelcome title="taskaria-web" />
+      <h1>{headerText}</h1>
     </div>
   );
 }

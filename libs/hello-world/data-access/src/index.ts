@@ -1,1 +1,1 @@
-export * from './lib/state/hello-world.slice';
+export * from './lib/+state/apis/hello-world-api';

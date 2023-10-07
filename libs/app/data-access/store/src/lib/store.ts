@@ -1,13 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import {
-  HELLO_WORLD_FEATURE_KEY,
-  helloWorldReducer,
-} from '@taskaria-app/hello-world/data-access';
+import { helloWorldApi } from '@taskaria-app/hello-world/data-access';
 
 export const store = configureStore({
-  reducer: { [HELLO_WORLD_FEATURE_KEY]: helloWorldReducer },
+  reducer: { [helloWorldApi.reducerPath]: helloWorldApi.reducer },
   // Additional middleware can be passed to this array
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(helloWorldApi.middleware),
   devTools: process.env.NODE_ENV !== 'production',
   // Optional Redux store enhancers
   enhancers: [],
