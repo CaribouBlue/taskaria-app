@@ -1,6 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useGetHelloWorldQuery } from '@taskaria-app/hello-world/data-access';
-import styles from './app.module.css';
 
 export function App() {
   const { isLoading, data } = useGetHelloWorldQuery();

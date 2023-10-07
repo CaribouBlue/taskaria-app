@@ -1,7 +1,7 @@
-import { store } from './store';
+import { setupStore } from './store';
 
-describe('store', () => {
-  it('should work', () => {
-    expect(store).toBeDefined();
+describe('setupStore', () => {
+  it('should exist', () => {
+    expect(setupStore).toBeDefined();
   });
 });

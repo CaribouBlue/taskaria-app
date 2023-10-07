@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx run-many -t build -p taskaria-*",
-    "test": "nx run-many -t test -p taskaria-*",
+    "build": "nx build",
+    "test": "nx test",
+    "test:affected": "nx affected -t test",
     "serve": "nx run-many -t serve -p taskaria-*",
-    "pre-commit-checks": "nx run-many -t lint test build -p taskaria-*"
+    "pre-commit-checks": "nx affected -t lint test build"
   },
   "private": true,
   "dependencies": {

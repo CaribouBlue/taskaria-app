@@ -23,7 +23,8 @@
       ],
       "@taskaria-app/hello-world/data-access": [
         "libs/hello-world/data-access/src/index.ts"
-      ]
+      ],
+      "@taskaria-app/test-util-react": ["libs/test/util-react/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

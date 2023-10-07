@@ -1,9 +1,11 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { store } from '@taskaria-app/app/data-access/store';
+import { setupStore } from '@taskaria-app/app/data-access/store';
 
 import App from './app/app';
+
+const store = setupStore();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
