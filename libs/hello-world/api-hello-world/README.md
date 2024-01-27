@@ -1,0 +1,7 @@
+# libs/hello-world/api-hello-world
+
+This library was generated with [Nx](https://nx.dev).
+
+## Running unit tests
+
+Run `nx test libs/hello-world/api-hello-world` to execute the unit tests via [Jest](https://jestjs.io).
