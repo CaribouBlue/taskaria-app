@@ -13,8 +13,24 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strictNullChecks": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@taskaria-app/app/data-access": ["libs/app/data-access/src/index.ts"],
+      "@taskaria-app/hello-world/api-hello-world": [
+        "libs/hello-world/api-hello-world/src/index.ts"
+      ],
+      "@taskaria-app/hello-world/data-access": [
+        "libs/hello-world/data-access/src/index.ts"
+      ],
+      "@taskaria-app/tasks/api-tasks": ["libs/tasks/api-tasks/src/index.ts"],
+      "@taskaria-app/tasks/util-constants": [
+        "libs/tasks/util-constants/src/index.ts"
+      ],
+      "@taskaria-app/tasks/util-db": ["libs/tasks/util-db/src/index.ts"],
+      "@taskaria-app/tasks/util-types": ["libs/tasks/util-types/src/index.ts"],
+      "@taskaria-app/test-util-react": ["libs/test/util-react/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
