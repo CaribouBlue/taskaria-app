@@ -3,6 +3,7 @@
 /.nx
 .nx
 .nx/cache
+tools/**/volumes
 
 # compiled output
 dist
