@@ -6,9 +6,4 @@ describe('App', () => {
     const { baseElement } = renderWithProviders(<App />);
     expect(baseElement).toBeTruthy();
   });
-
-  it('should have a greeting as the title', () => {
-    const { getByText } = renderWithProviders(<App />);
-    expect(getByText(/Loading/gi)).toBeTruthy();
-  });
 });
