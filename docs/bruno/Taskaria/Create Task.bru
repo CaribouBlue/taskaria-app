@@ -1,0 +1,17 @@
+meta {
+  name: Create Task
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{origin}}/api/users/0/tasks
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "UserId": "0"
+  }
+}
