@@ -18,7 +18,7 @@ export class TasksDb {
   _client?: DynamoDBClient;
 
   async createClient() {
-    const client = new DynamoDBClient({ endpoint: 'http://localhost:8000' });
+    const client = new DynamoDBClient({ endpoint: 'http://localhost:8000', region: 'us-east-1' });
     return client;
   }
 
