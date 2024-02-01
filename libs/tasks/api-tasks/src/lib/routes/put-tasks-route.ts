@@ -7,6 +7,7 @@ interface PutTasksRoute extends RouteGenericInterface {
   Body: Task;
   Params: {
     userId: string;
+    taskId: string;
   };
   Reply: {
     task: Task;
@@ -22,8 +23,9 @@ const schema: {
     type: 'object',
     properties: {
       userId: { type: 'string' },
+      taskId: { type: 'string' },
     },
-    required: ['userId'],
+    required: ['userId', 'taskId'],
     additionalProperties: false,
   },
   body: {
@@ -41,7 +43,7 @@ const schema: {
 export const declarePutTasksRoute = (fastify: FastifyInstance) => {
   fastify.route<PutTasksRoute>({
     method: 'PUT',
-    url: '/',
+    url: '/:taskId',
     schema,
     async handler(request, reply) {
       const task = request.body;
