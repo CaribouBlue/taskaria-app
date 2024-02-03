@@ -48,7 +48,7 @@ export const declarePostTasksRoute = (fastify: FastifyInstance) => {
       const newTask = request.body;
       const task: Task = {
         ...newTask,
-        TaskId: uuid(),
+        taskId: uuid(),
       };
       await this.taskDb.putTask(task);
       return { task };

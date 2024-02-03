@@ -1,8 +1,9 @@
 export interface Task {
-  UserId: string;
-  TaskId: string;
+  userId: string;
+  taskId: string;
+  summary: string;
 }
 
 export type Tasks = Task[];
 
-export type NewTask = Omit<Task, 'TaskId'>;
+export type NewTask = Omit<Task, 'taskId'>;

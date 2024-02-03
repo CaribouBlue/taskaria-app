@@ -22,8 +22,8 @@ export interface TasksState extends EntityState<TasksEntity> {
 
 export const tasksAdapter = createEntityAdapter<TasksEntity>({
   selectId(task) {
-    return task.TaskId;
-  }
+    return task.taskId;
+  },
 });
 
 /**
@@ -53,9 +53,10 @@ export const fetchTasks = createAsyncThunk<TasksEntity[]>(
      */
     return Promise.resolve([
       {
-        UserId: '0',
-        TaskId: '0',
-      }
+        userId: '0',
+        taskId: '0',
+        summary: 'A thing to do',
+      },
     ]);
   }
 );
@@ -142,4 +143,9 @@ export const selectAllTasks = createSelector(getTasksState, selectAll);
 export const selectTasksEntities = createSelector(
   getTasksState,
   selectEntities
+);
+
+export const selectTasksLoadingStatus = createSelector(
+  getTasksState,
+  ({ loadingStatus }) => loadingStatus
 );

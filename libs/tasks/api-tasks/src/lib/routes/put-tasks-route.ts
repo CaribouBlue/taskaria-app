@@ -47,7 +47,7 @@ export const declarePutTasksRoute = (fastify: FastifyInstance) => {
     schema,
     async handler(request, reply) {
       const task = request.body;
-      const taskId = task.TaskId;
+      const taskId = task.taskId;
       await this.taskDb.putTask(task);
       return { task };
     },

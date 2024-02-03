@@ -4,18 +4,20 @@ import { JSONSchemaType } from 'ajv';
 export const taskSchema: JSONSchemaType<Task> = {
   type: 'object',
   properties: {
-    TaskId: { type: 'string' },
-    UserId: { type: 'string' },
+    taskId: { type: 'string' },
+    userId: { type: 'string' },
+    summary: { type: 'string' },
   },
-  required: ['TaskId', 'UserId'],
+  required: ['taskId', 'userId', 'summary'],
 };
 
 export const newTaskSchema: JSONSchemaType<NewTask> = {
   type: 'object',
   properties: {
-    UserId: { type: 'string' },
+    userId: { type: 'string' },
+    summary: { type: 'string' },
   },
-  required: ['UserId'],
+  required: ['userId', 'summary'],
 };
 
 export const tasksSchema: JSONSchemaType<Tasks> = {

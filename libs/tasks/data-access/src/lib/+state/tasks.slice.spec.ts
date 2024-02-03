@@ -1,4 +1,5 @@
 import { fetchTasks, tasksAdapter, tasksReducer } from './tasks.slice';
+import { mockTask } from './__mocks__/mock-tasks-data';
 
 describe('tasks reducer', () => {
   it('should handle initial state', () => {
@@ -22,17 +23,14 @@ describe('tasks reducer', () => {
       })
     );
 
-    state = tasksReducer(
-      state,
-      fetchTasks.fulfilled([{ UserId: '1', TaskId: '1' }], '')
-    );
+    state = tasksReducer(state, fetchTasks.fulfilled([mockTask], ''));
 
     expect(state).toEqual(
       expect.objectContaining({
         loadingStatus: 'loaded',
         error: null,
-        entities: { '1': { UserId: '1', TaskId: '1' } },
-        ids: ['1'],
+        entities: { [mockTask.taskId]: mockTask },
+        ids: [mockTask.taskId],
       })
     );
 
@@ -42,8 +40,8 @@ describe('tasks reducer', () => {
       expect.objectContaining({
         loadingStatus: 'error',
         error: 'Uh oh',
-        entities: { '1': { UserId: '1', TaskId: '1' } },
-        ids: ['1'],
+        entities: { [mockTask.taskId]: mockTask },
+        ids: [mockTask.taskId],
       })
     );
   });
