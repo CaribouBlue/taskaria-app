@@ -45,7 +45,6 @@ export const fetchUser = createAsyncThunk<User>(
      * For example, `return myApi.getUsers()`;
      * Right now we just return an empty array.
      */
-    console.log('fetching user ...');
     return Promise.resolve({
       id: '0',
     });
