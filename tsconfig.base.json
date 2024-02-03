@@ -20,6 +20,7 @@
       "@taskaria-app/tasks-data-access": [
         "libs/tasks/data-access/src/index.ts"
       ],
+      "@taskaria-app/tasks-feature": ["libs/tasks/feature/src/index.ts"],
       "@taskaria-app/tasks/api-tasks": ["libs/tasks/api-tasks/src/index.ts"],
       "@taskaria-app/tasks/util-constants": [
         "libs/tasks/util-constants/src/index.ts"
