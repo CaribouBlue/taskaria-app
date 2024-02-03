@@ -7,6 +7,7 @@ import {
   PayloadAction,
 } from '@reduxjs/toolkit';
 import { Task } from '@taskaria-app/tasks/util-types';
+import { mockTask } from './__mocks__/mock-tasks-data';
 
 export const TASKS_FEATURE_KEY = 'tasks';
 
@@ -51,13 +52,7 @@ export const fetchTasks = createAsyncThunk<TasksEntity[]>(
      * For example, `return myApi.getTaskss()`;
      * Right now we just return an empty array.
      */
-    return Promise.resolve([
-      {
-        userId: '0',
-        taskId: '0',
-        summary: 'A thing to do',
-      },
-    ]);
+    return Promise.resolve([mockTask]);
   }
 );
 
