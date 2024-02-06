@@ -1,6 +1,7 @@
 import { useCreateTask } from '@taskaria-app/tasks-data-access';
 import styles from './task-creation-input.module.css';
 import { ChangeEventHandler, KeyboardEventHandler, useState } from 'react';
+import { TextField } from '@mui/material';
 
 /* eslint-disable-next-line */
 export interface TaskCreationInputProps {}
@@ -21,11 +22,14 @@ export function TaskCreationInput(props: TaskCreationInputProps) {
   };
 
   return (
-    <input
+    <TextField
+      id="task-creation-input"
+      label="Create task ..."
+      variant="filled"
       value={newTask}
       onChange={handleInputChange}
       onKeyDown={handleInputKeyDown}
-    ></input>
+    />
   );
 }
 
