@@ -1,12 +1,12 @@
+import { CorePageContainer } from '@taskaria-app/app-feature';
 import { TaskCreationInput, TaskList } from '@taskaria-app/tasks-feature';
 
 export function App() {
   return (
-    <div>
-      <h1>Taskaria</h1>
-      <TaskCreationInput></TaskCreationInput>
+    <CorePageContainer>
+      <TaskCreationInput style={{ width: '100%' }}></TaskCreationInput>
       <TaskList></TaskList>
-    </div>
+    </CorePageContainer>
   );
 }
 

@@ -4,7 +4,9 @@ import { ChangeEventHandler, KeyboardEventHandler, useState } from 'react';
 import { TextField } from '@mui/material';
 
 /* eslint-disable-next-line */
-export interface TaskCreationInputProps {}
+export interface TaskCreationInputProps {
+  style?: React.CSSProperties;
+}
 
 export function TaskCreationInput(props: TaskCreationInputProps) {
   const createTask = useCreateTask();
@@ -29,6 +31,7 @@ export function TaskCreationInput(props: TaskCreationInputProps) {
       value={newTask}
       onChange={handleInputChange}
       onKeyDown={handleInputKeyDown}
+      style={props.style}
     />
   );
 }

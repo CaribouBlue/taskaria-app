@@ -16,6 +16,7 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
+      "@taskaria-app/app-feature": ["libs/app/feature/src/index.ts"],
       "@taskaria-app/app/data-access": ["libs/app/data-access/src/index.ts"],
       "@taskaria-app/tasks-data-access": [
         "libs/tasks/data-access/src/index.ts"
