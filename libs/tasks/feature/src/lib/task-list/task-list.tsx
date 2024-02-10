@@ -5,12 +5,15 @@ import { MouseEventHandler, useState } from 'react';
 import { Task } from '@taskaria-app/tasks/util-types';
 
 /* eslint-disable-next-line */
-export interface TaskListProps {}
+export interface TaskListProps {
+  taskSorter?: (a: Task, b: Task) => number;
+}
 
 export function TaskList(props: TaskListProps) {
   const tasks = useTasks();
-  const incompleteTasks = tasks.filter((task) => !task.isCompleted);
-  const completeTasks = tasks.filter((task) => task.isCompleted);
+  const sortedTasks = tasks.sort(props.taskSorter || (() => 0));
+  const incompleteTasks = sortedTasks.filter((task) => !task.isCompleted);
+  const completeTasks = sortedTasks.filter((task) => task.isCompleted);
 
   const [isCompleteTaskListEnabled, setIsCompleteTaskListEnabled] =
     useState(false);
