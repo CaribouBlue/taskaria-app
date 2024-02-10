@@ -1,4 +1,5 @@
 import {
+  createAction,
   createAsyncThunk,
   createEntityAdapter,
   createSelector,
@@ -67,7 +68,22 @@ export const tasksSlice = createSlice({
   reducers: {
     add: tasksAdapter.addOne,
     remove: tasksAdapter.removeOne,
-    // ...
+    completeTask: (state: TasksState, action: PayloadAction<TasksEntity>) => {
+      const task = state.entities[action.payload.taskId];
+      if (task) {
+        task.isCompleted = true;
+      } else {
+        throw new Error('No task found with provided ID');
+      }
+    },
+    uncompleteTask: (state: TasksState, action: PayloadAction<TasksEntity>) => {
+      const task = state.entities[action.payload.taskId];
+      if (task) {
+        task.isCompleted = false;
+      } else {
+        throw new Error('No task found with provided ID');
+      }
+    },
   },
   extraReducers: (builder) => {
     builder

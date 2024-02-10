@@ -8,6 +8,9 @@ import {
   ListItemText,
 } from '@mui/material';
 import { MouseEventHandler, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '@taskaria-app/app/data-access';
+import { tasksActions } from '@taskaria-app/tasks-data-access';
 
 /* eslint-disable-next-line */
 export interface TaskListItemProps {
@@ -15,11 +18,15 @@ export interface TaskListItemProps {
 }
 
 export function TaskListItem({ task }: TaskListItemProps) {
-  const [isChecked, setIsChecked] = useState<boolean>(false);
+  const dispatch = useDispatch<AppDispatch>();
   const labelId = `task-list-item-label-${task.taskId}`;
 
   const handleToggle: MouseEventHandler = () => {
-    setIsChecked(!isChecked);
+    if (task.isCompleted) {
+      dispatch(tasksActions.uncompleteTask(task));
+    } else {
+      dispatch(tasksActions.completeTask(task));
+    }
   };
 
   return (
@@ -28,7 +35,7 @@ export function TaskListItem({ task }: TaskListItemProps) {
         <ListItemIcon>
           <Checkbox
             edge="start"
-            checked={isChecked}
+            checked={task.isCompleted}
             tabIndex={-1}
             disableRipple
             inputProps={{ 'aria-labelledby': labelId }}

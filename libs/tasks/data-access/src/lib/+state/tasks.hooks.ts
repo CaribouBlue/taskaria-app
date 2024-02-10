@@ -37,6 +37,7 @@ export const useCreateTask = () => {
           userId: user.id,
           taskId: uuid(),
           summary: newTask,
+          isCompleted: false,
         })
       );
       createTask(null);

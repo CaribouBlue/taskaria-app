@@ -7,6 +7,7 @@ export const taskSchema: JSONSchemaType<Task> = {
     taskId: { type: 'string' },
     userId: { type: 'string' },
     summary: { type: 'string' },
+    isCompleted: { type: 'boolean' },
   },
   required: ['taskId', 'userId', 'summary'],
 };
