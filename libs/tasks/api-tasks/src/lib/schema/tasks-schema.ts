@@ -8,6 +8,7 @@ export const taskSchema: JSONSchemaType<Task> = {
     userId: { type: 'string' },
     summary: { type: 'string' },
     isCompleted: { type: 'boolean' },
+    createdTimestamp: { type: 'number' },
   },
   required: ['taskId', 'userId', 'summary'],
 };
@@ -17,8 +18,9 @@ export const newTaskSchema: JSONSchemaType<NewTask> = {
   properties: {
     userId: { type: 'string' },
     summary: { type: 'string' },
+    createdTimestamp: { type: 'number' },
   },
-  required: ['userId', 'summary'],
+  required: ['userId', 'summary', 'createdTimestamp'],
 };
 
 export const tasksSchema: JSONSchemaType<Tasks> = {

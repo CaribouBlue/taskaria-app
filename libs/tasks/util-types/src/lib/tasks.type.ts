@@ -3,6 +3,7 @@ export interface Task {
   taskId: string;
   summary: string;
   isCompleted: boolean;
+  createdTimestamp: number;
 }
 
 export type Tasks = Task[];

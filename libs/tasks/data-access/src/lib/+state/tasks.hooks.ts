@@ -38,6 +38,7 @@ export const useCreateTask = () => {
           taskId: uuid(),
           summary: newTask,
           isCompleted: false,
+          createdTimestamp: Date.now(),
         })
       );
       createTask(null);

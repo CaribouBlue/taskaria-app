@@ -5,4 +5,5 @@ export const mockTask: Task = {
   taskId: '0',
   summary: 'At dawn, look to the east.',
   isCompleted: false,
+  createdTimestamp: Date.now(),
 };
